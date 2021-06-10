@@ -39,7 +39,7 @@ export class AssetTableComponent implements OnDestroy, OnInit {
     this.subs.unsubscribe();
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.initTableData();
   }
 
