@@ -1,0 +1,82 @@
+// Animations
+$cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+// Assets
+$asset-sidebar-width: 240px;
+$asset-sidebar-margin: 8px;
+$asset-table-row-height: 24px;
+
+// Currency List
+$currency-map: (
+  aed: '\062f\002E\0625',
+  aud: '$',
+  azn: '\20BC',
+  bbd: '$',
+  bbt: '\0054\006b',
+  bgn: '\043B\0432',
+  bmd: '$',
+  bdt: 'Tk',
+  brl: 'R$',
+  bsd: '$',
+  bzd: '$',
+  cad: '$',
+  chf: 'Fr',
+  clp: '$',
+  cny: '\00A5',
+  cop: '$',
+  czk: '\004B\0010D',
+  dkk: 'kr',
+  dzd: '\002F\062C\0006',
+  egp: '£',
+  eur: '€',
+  fjd: '$',
+  gbp: '£',
+  gtq: 'Q',
+  hkd: '$',
+  hrk: 'kn',
+  huf: 'Ft',
+  idr: 'Rp',
+  ils: '\20AA',
+  inr: '\20B9',
+  jmd: '$',
+  jod: 'JOD',
+  jpy: '\00A5',
+  krw: '\20A9',
+  kwd: '\002f\062e\0043\0006',
+  kyd: '$',
+  ltl: 'Lt',
+  mop: 'MOP$',
+  mur: 'Rs',
+  mxn: '$',
+  myr: 'RM',
+  nok: 'kr',
+  nzd: '$',
+  omr: '\FDFC ',
+  pen: 'S/.',
+  pgk: 'K',
+  php: '\20B1',
+  pln: '\007A\0142',
+  qar: '\FDFC',
+  ron: 'lei',
+  rub: '\20BD',
+  sar: '\FDFC',
+  sek: 'kr',
+  sgd: '$',
+  thb: '\0E3F',
+  ttd: '$',
+  twd: '$',
+  usd: '$',
+  xcd: '$',
+  zar: 'R',
+  zmw: 'ZK',
+);
+
+// Layout dimensions
+$banner-height: 40px;
+$header-height: 64px;
+$sidebar-closed-width: 64px;
+$sidebar-open-width: 186px;
+
+// Risk history
+$history-panel-width: 265px;
+$history-panel-margin: 16px;

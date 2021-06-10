@@ -1,0 +1,35 @@
+@charset 'utf-8';
+
+// Normalize
+// ---------
+@import '~normalize.css/normalize.css';
+
+// Helpers
+// -------
+@import 'helpers/default';
+
+// Base
+// ----
+@import 'base/default';
+
+// Hands on table
+// --------------
+@import '~handsontable/dist/handsontable.full.css';
+@import 'vendor/handsontable';
+
+// Mapbox
+// -------
+@import '~mapbox-gl/dist/mapbox-gl.css';
+@import '~@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css';
+
+// Material
+// --------
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+// Partials
+// ----------
+@import 'partials/default';
+
+// Components
+// ----------
+@import 'components/default';

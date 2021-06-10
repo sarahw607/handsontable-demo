@@ -1,0 +1,40 @@
+body {
+  // sass-lint:disable-block no-vendor-prefixes
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-stack;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden !important; // sass-lint:disable-line no-important
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.h1 {
+  color: get-color(core, heading);
+  font: map-get($font-weight, light) 20px/32px $font-stack;
+  margin: 0 0 24px;
+}
+
+.h2 {
+  color: get-color(core, heading);
+  font: map-get($font-weight, semi-bold) 20px/32px $font-stack;
+  margin: 0;
+}
+
+.h3 {
+  color: get-color(core, heading);
+  font: map-get($font-weight, light) 16px/30px $font-stack;
+}
+
+.page-error {
+  color: get-color(form-element, errorMessage);
+  font: map-get($font-weight, normal) 18px/22px $font-stack;
+}

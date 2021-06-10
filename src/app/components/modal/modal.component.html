@@ -1,0 +1,19 @@
+<div class="{{ modifiedClass }}" [@modalTransition]="visibility" (@modalTransition.done)="animationDone($event)">
+  <div class="modal__content" [@fullscreenTransition]="fullscreen">
+    <a href="#" class="modal__close" (click)="close($event)">
+      X
+      <!-- <fa-icon [icon]="['fal', 'times']"></fa-icon> -->
+    </a>
+    <div class="modal__inner">
+      <ng-content></ng-content>
+    </div>
+    <app-confirmation-dialog
+      *ngIf="showConfirmation"
+      [cancel]="cancelClose"
+      [confirm]="confirmClose"
+      [modifierClasses]="['embedded']"
+    >
+      {{ confirmationText }}
+    </app-confirmation-dialog>
+  </div>
+</div>

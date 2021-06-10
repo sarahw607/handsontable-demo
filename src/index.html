@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Test Hot App</title>
+    <base href="/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        min-width: 320px;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
+      }
+      .incompatible-error {
+        display: none;
+      }
+      .incompatible-error.browser-unsupported {
+        background: rgba(255, 238, 0, 0.4);
+        color: #5c596d;
+        display: block;
+        padding: 15px;
+        text-align: center;
+      }
+      .incompatible-error-title {
+        font: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="incompatible-error">
+      <div class="incompatible-error-title">Supported browsers are Microsoft Edge, Google Chrome, and Firefox.</div>
+      <div>Please contact Workbench support for further details.</div>
+    </div>
+    <app-root></app-root>
+
+    <noscript>
+      <p>
+        Sorry, JavaScript must be enabled to use this app
+      </p>
+    </noscript>
+  </body>
+</html>

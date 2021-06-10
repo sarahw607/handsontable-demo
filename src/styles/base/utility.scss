@@ -1,0 +1,107 @@
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.vertical-center {
+  // sass-lint:disable-block no-important (need to add important to table cell font styles)
+  font-size: 0 !important;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.float {
+  &--left {
+    float: left;
+  }
+
+  &--right {
+    float: right;
+  }
+}
+
+.visibility {
+  &--hidden {
+    visibility: hidden;
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+.clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+.new-row {
+  flex-basis: 100%;
+  padding: 0;
+}
+
+.scrollbar-measure {
+  @include scrollbars;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
+  width: 100px;
+}
+
+.scroll {
+  &--y {
+    overflow-y: scroll;
+  }
+
+  &--x {
+    overflow-x: scroll;
+  }
+}
+
+.success {
+  color: get-color(http-indicator, text, success);
+}
+
+.modal-download-button {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.flex-grow {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.margin {
+  &--top {
+    &-large {
+      margin-top: 24px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "hot-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --aot --port 4400",
+    "test": "ng test",
+    "lint": "ng lint && npm run lint:sass",
+    "lint:sass": "sass-lint -c .sass-lint.yml 'src/**/*.scss' -v -q",
+    "e2e": "ng e2e"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not ie 9-11",
+    "not ie_mob 9-11"
+  ],
+  "dependencies": {
+    "@angular-devkit/build-angular": "~0.901.10",
+    "@angular/animations": "~9.1.11",
+    "@angular/cdk": "^8.2.3",
+    "@angular/common": "~9.1.11",
+    "@angular/compiler": "~9.1.11",
+    "@angular/core": "~9.1.11",
+    "@angular/forms": "~9.1.11",
+    "@angular/material": "^8.2.3",
+    "@angular/material-moment-adapter": "^8.2.3",
+    "@angular/platform-browser": "~9.1.11",
+    "@angular/platform-browser-dynamic": "~9.1.11",
+    "@handsontable/angular": "^5.0.0",
+    "@types/lodash-es": "^4.17.3",
+    "core-js": "^3.2.1",
+    "handsontable": "7.1.0",
+    "lodash-es": "^4.17.15",
+    "normalize.css": "^8.0.1",
+    "rxjs": "^6.5.3",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@angular/cli": "~9.1.10",
+    "@angular/compiler-cli": "~9.1.11",
+    "@angular/language-service": "~9.1.11",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~3.1.1",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~1.1.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "lint-staged": "8.1.7",
+    "prettier": "^1.19.1",
+    "protractor": "~5.4.0",
+    "protractor-cucumber-framework": "^6.1.2",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.20.0",
+    "typescript": "3.8.3",
+    "webdriver-manager": "^13.0.0"
+  }
+}
