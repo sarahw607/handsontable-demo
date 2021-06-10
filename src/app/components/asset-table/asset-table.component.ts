@@ -131,7 +131,7 @@ export class AssetTableComponent implements OnDestroy, OnInit {
         header: 'City',
         data: '',
       },
-      { displaySequence: 1090, header: 'Postcde', data: '' },
+      { displaySequence: 1090, header: 'Postcode', data: '' },
       { displaySequence: 1100, header: 'Country', data: '' },
 
       {
@@ -151,7 +151,6 @@ export class AssetTableComponent implements OnDestroy, OnInit {
       this.tableColumnDataMapping = this.tableColumnDataMapping.sort((a, b) =>
         this.sorter(a.displaySequence, b.displaySequence),
       );
-      console.log(this.tableColumnDataMapping);
       this.createTable();
     });
   }
