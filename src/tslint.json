@@ -1,0 +1,8 @@
+{
+  "extends": "../tslint.json",
+  "rules": {
+    "component-selector": [false],
+    "directive-selector": [false],
+    "typedef": [true, "call-signature"]
+  }
+}

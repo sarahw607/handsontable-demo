@@ -1,0 +1,929 @@
+$global-colors: (
+  asset-cleanse: (
+    status: (
+      cleansed-to-city-level: #421b67,
+      cleansed-to-country-level: #c01b83,
+      manually-confirmed: #818181,
+      matched: #004fb6,
+      matched-building: #3ba6ff,
+      matched-lat-lon: #009ab1,
+      not-matched: #bd2624,
+    ),
+    text: #fff,
+  ),
+  asset-custom-filters: (
+    default: (
+      bg: #e5edf8,
+      condition: #001e60,
+      seperator: #8798ad,
+      text: #004fb6,
+    ),
+    editing: (
+      bg: #004fb6,
+      condition: #e5edf8,
+      text: #fff,
+    ),
+  ),
+  asset-parent-match: (
+    status: (
+      changed: #ffa001,
+      date-of-loss-validation-warning: #da4167,
+      deleted: #bd2624,
+      existing: #4f9f31,
+      missing-premium-warning: #456990,
+      new: #44c0ff,
+      no-risk-match-warning: #f45b69,
+      reconciled: #9e9e00,
+    ),
+    text: #fff,
+  ),
+  asset-schedule-mapping: (
+    country-select: (
+      bg: #f2f6fc,
+      text: #5c596d,
+    ),
+    col-highlight: #fbec95,
+    search-results: (
+      icon: #5c596d,
+      text: #8798ad,
+    ),
+    tabs: (
+      bg: (
+        active: #f2f6fc,
+        default: #f9f9f9,
+      ),
+      text: (
+        active: #1a61bd,
+        default: #9b9aa6,
+      ),
+    ),
+  ),
+  asset-status: (
+    active: #4f9f31,
+    expired: #8798ad,
+  ),
+  asset-validations: (
+    warnings: (
+      icon: #ffa001,
+      item: #5c596d,
+      title: #444,
+    ),
+  ),
+  audit-history: (
+    date: #8798ad,
+    detail: #5c596d,
+    sort: #8798ad,
+    sort-icon: #1a61bd,
+    user: #1a61bd,
+  ),
+  box-shadow: (
+    from: rgba(9, 30, 66, 0.25),
+    to: rgba(9, 30, 66, 0.31),
+  ),
+  broker: (
+    address: rgba(92, 89, 109, 0.8),
+    highlight: #1a61bd,
+    info: #8f8e99,
+    name: #5c596d,
+    title: #757483,
+  ),
+  button: (
+    primary: (
+      bg: #1a61bd,
+      text: #fff,
+    ),
+    reset: (
+      bg: #5c596d,
+    ),
+    secondary: (
+      bg: #e5edf8,
+      text: #004fb6,
+    ),
+    tertiary: (
+      bg: #ffd900,
+      text: #004fb6,
+    ),
+    highlight: (
+      bg: #fff,
+      text: #1a61bd,
+    ),
+  ),
+  card: (
+    box-shadow: rgba(46, 91, 255, 0.07),
+  ),
+  cleanse-assets: (
+    bg: #fff,
+    data-table: (
+      border: #f2f6fc,
+      bg: #fff,
+    ),
+    drop-zone: (
+      bg: #e5edf9,
+      border: rgba(26, 97, 189, 0.24),
+      icon: #fff,
+      text: rgba(26, 97, 189, 0.5),
+    ),
+    info-text: #8798ad,
+    tag: (
+      bg: #be2382,
+      text: #fff,
+    ),
+  ),
+  comments: (
+    bg: #fff,
+    bg-hover: rgba(0, 0, 0, 0.15),
+    box-shadow: rgba(0, 30, 96, 0.06),
+    filter-button: (
+      bg: rgba(229, 237, 249, 0.5),
+      hover-bg: rgba(229, 237, 249, 0.75),
+      text: #1a61bd,
+    ),
+    form-border: rgba(68, 68, 68, 0.16),
+    highlight: #b0bac9,
+    text: #444,
+    thumbtack: #ffa001,
+    toggle: (
+      text: #1a61bd,
+      bg: (
+        hover: rgba(0, 0, 0, 0.15),
+      ),
+    ),
+    selected: (
+      bg: #1a61bd,
+      text: #fff,
+    ),
+    status: rgba(26, 97, 189, 0.45),
+    submit: #b0bac9,
+  ),
+  conflict-notice: (
+    action: #5c596d,
+    bg: (
+      default: #ffeccc,
+      light: #f9f9f9,
+    ),
+    border: #ffa001,
+    icon: #ffa001,
+    header: #ffa001,
+    text: (
+      default: #ffa000,
+      light: #8798ad,
+    ),
+  ),
+  core: (
+    body: (
+      bg: #fff,
+      text: #444,
+      highlight: #686678,
+    ),
+    border: rgba(26, 97, 189, 0.12),
+    box-shadow: rgba(26, 97, 189, 0.08),
+    heading: #5c596d,
+    link: #004fb6,
+    tab: (
+      bg: #fcfdfe,
+      txt: #9b9aa6,
+    ),
+    text: #8798ad,
+    title: #1a61bd,
+    title-border: #e5edf9,
+  ),
+  dashboard: (
+    header-section: (
+      bg: #fff,
+    ),
+    icons: #5c596d,
+  ),
+  data-table: (
+    text: (
+      head: #8798ad,
+      body: #5c596d,
+    ),
+    bg: (
+      head: #f2f6fc,
+      even: #f9f9f9,
+      odd: #fff,
+    ),
+    selected: (
+      bg: mix(#4f9f31, #fff, 5%),
+      border: #4f9f31,
+    ),
+  ),
+  document-generation: (
+    group: (
+      bg: #edf2fa,
+      title: #5c596d,
+    ),
+    section: (
+      bg: #fff,
+      border: #e5edf8,
+      box-shadow: rgba(0, 79, 182, 0.12),
+      title: #004fb6,
+    ),
+  ),
+  documents: (
+    bg: #f9fbfe,
+    border: #e5edf9,
+    box-shadow: rgba(92, 89, 109, 0.24),
+    highlight: #5c596d,
+    name: #1a61bd,
+    selector: (
+      active: #1a61bd,
+      default: #a3c0e5,
+    ),
+    text: #8798ad,
+  ),
+  download-link: (
+    default: (
+      bg: #ffeccc,
+      border: #ffa001,
+      icon: #ffa001,
+      text: #ffa001,
+    ),
+    downloaded: (
+      bg: #f9faff,
+      border: #e0e7ff,
+      icon: #1a61bd,
+      text: #5c596d,
+    ),
+    indicator: (
+      bg: #f9f9f9,
+      icon-incomplete: #ffa001,
+      icon-complete: #4f9f31,
+      text: #8798ad,
+    ),
+  ),
+  form-element: (
+    bg: (
+      default: mix(#e0e7ff, #fff, 20%),
+      error: #f9faff,
+      focus: mix(#e0e7ff, #fff, 40%),
+    ),
+    border: (
+      default: #e0e7ff,
+      error: #bd2624,
+      focus: #004fb6,
+      selected: #4f9f31,
+    ),
+    icon: (
+      default: #8798ad,
+      error: #bd2624,
+      focus: #004fb6,
+      selected: #4f9f31,
+    ),
+    info: (
+      bg: #1a61bd,
+      text: #fff,
+    ),
+    text: (
+      default: #2e384d,
+      label: #8798ad,
+      link: #1a61bd,
+      selected: #004fb6,
+      warning: #ffa001,
+    ),
+    errorMessage: #bd2624,
+    optional: #bfc5d2,
+    repeatable-icon: #004fb6,
+    scrollbar: (
+      bg: mix(#e0e7ff, #fff, 20%),
+      thumb: #004fb6,
+    ),
+  ),
+  handsontable: (
+    border: #d1deee,
+    bg: (
+      header: #f2f6fc,
+      highlight: #ffd999,
+      odd: #f9f9f9,
+      outside-range: #ffcccb,
+    ),
+    text: (
+      default: #5c596d,
+      outside-range: #bd2624,
+      read-only: rgba(92, 89, 109, 0.5),
+    ),
+    th: (
+      bg: #f0f0f0,
+      text: #222,
+    ),
+  ),
+  http-indicator: (
+    text: (
+      success: #73af55,
+      error: #bd2624,
+    ),
+  ),
+  layout: (
+    main: (
+      bg: #f2f6fc,
+    ),
+    sidebar: (
+      bg: linear-gradient(to bottom, #123274, #0d1d2c),
+      toggle: #bfc5d2,
+    ),
+  ),
+  loader: (
+    bg: #e5edf9,
+  ),
+  loading: (
+    bg: #fff,
+    heading: #5c596d,
+    overlay: rgba(#2c3e50, 0.4),
+  ),
+  master-bordereaux: (
+    details: (
+      bg: #f9f9f9,
+      border: #e0dfe3,
+      button: (
+        default: (
+          bg: #e5edf8,
+          text: #004fb6,
+        ),
+        disabled: (
+          bg: #ccc,
+          text: #5c596d,
+        ),
+      ),
+      date: #1a61bd,
+      default: #1a61bd,
+      label: #8798ad,
+      period: #8798ad,
+      title: #8798ad,
+      status: #fff,
+    ),
+    file: (
+      bg: #edf2fa,
+      default: #8a97ab,
+      status: (
+        complete: #639c42,
+        overdue: #f3a33a,
+        wip: #1b51b0,
+      ),
+    ),
+    heading: #8798ad,
+    subheading: #5c596d,
+    text: #8798ad,
+  ),
+  master-dashboard: (
+    data: (
+      bg: #f9f9f9,
+      border: #dfdee1,
+      open: #f70,
+    ),
+    label: #8798ad,
+    progress-icon: (
+      complete: #4f9f31,
+      in-progress: #ffa000,
+      not-started: #bd2624,
+    ),
+    title: #4cb0d8,
+    value: #4cb0d8,
+  ),
+  master-value: (
+    alert: (
+      bg: #f5eae9,
+      text: #bd2624,
+    ),
+    good: (
+      bg: #eef5eb,
+      text: #45842e,
+    ),
+    warning: (
+      bg: #fdf5e8,
+      text: #f70,
+    ),
+  ),
+  modal: (
+    bg: #fff,
+    box-shadow: rgba(#000, 0.3),
+    close: (
+      bg: #fff,
+      box-shadow: rgba(26, 97, 189, 0.2),
+      icon: #5c596d,
+    ),
+    confirmation: (
+      bg: #fff,
+      border: #dfdee2,
+      box-shadow: rgba(26, 97, 189, 0.08),
+    ),
+    header: (
+      border: #e5edf9,
+      highlight: #5c596d,
+      text: #004fb6,
+    ),
+    message: #5b596c,
+    overlay: rgba(#2c3e50, 0.7),
+  ),
+  new-submission: (
+    bg: (
+      default: #fff,
+      header: rgba(#e5edf9, 0.5),
+    ),
+    border: rgba(26, 97, 189, 0.12),
+    box-shadow: rgba(0, 30, 96, 0.08),
+    icon: (
+      upload: (
+        bg: #1a61bd,
+        color: #fff,
+      ),
+    ),
+    progress: (
+      bg: (
+        completed: #fbf6a2,
+        default: #f2f6fc,
+        selected: #ffd900,
+      ),
+      text: (
+        selected: #5c596d,
+        default: #5c596d,
+      ),
+      border: #fff,
+    ),
+    text: (
+      title: #5c596d,
+      cancel: rgba(92, 89, 109, 0.5),
+    ),
+  ),
+  overlay: (
+    bg: #f9f9f9,
+    box-shadow: rgba(0, 0, 0, 0.16),
+    close: (
+      bg: #fff,
+      border: #1a61bd,
+      icon: #1a61bd,
+    ),
+    overlay: rgba(#e5edf9, 0.9),
+  ),
+  nav: (
+    bg: (
+      active: #ffd900,
+      hover: rgba(255, 255, 255, 0.1),
+    ),
+    list: (
+      bg: #fff,
+      border: rgba(26, 97, 189, 0.16),
+      box-shadow: rgba(26, 97, 189, 0.24),
+    ),
+    text: (
+      default: #ffd900,
+      active: #004fb6,
+    ),
+  ),
+  pagination: (
+    arrows: (
+      default: #1a61bd,
+      disabled: #9b9aa6,
+    ),
+    page: (
+      active: (
+        bg: #1a61bd,
+        text: #fff,
+      ),
+      default: #5c596d,
+    ),
+  ),
+  pdf-analysis: (
+    item: (
+      bg: #f9f9f9,
+      border: #eee,
+      box-shadow: rgba(0, 0, 0, 0.24),
+      content: #004fb6,
+      title: #8798ad,
+      selected: (
+        title: #004fb6,
+        bg: #e5edf8,
+      ),
+    ),
+    title: (
+      bg: #fff,
+      border: #e5edf9,
+      text: #5c596d,
+    ),
+    match-status: (
+      matched: rgba(#73af55, 0.8),
+      unmatched: rgba(255, 160, 1, 0.8),
+    ),
+  ),
+  placing-type: (
+    fac-ri: (
+      background: #009ab1,
+      text: #fff,
+    ),
+    selector: (
+      bg: (
+        active: #1a61bd,
+        default: transparent,
+      ),
+      border: #1a61bd,
+      text: (
+        active: #fff,
+        default: #1a61bd,
+      ),
+    ),
+    text: #004fb6,
+    tile: (
+      bg: #f2f6fc,
+      text: #1a61bd,
+    ),
+    master: (
+      background: #ffd900,
+      gradient-background: rgba(255, 160, 1, 0.7),
+      text: #004fb6,
+    ),
+  ),
+  progress-bar: (
+    bg: (
+      default: linear-gradient(90deg, rgba(255, 238, 0, 0.2) 0%, rgba(255, 238, 0, 0.4) 100%),
+      file-upload: rgba(#004fb6, 0.2),
+    ),
+    indicator: (
+      default: rgba(255, 217, 0, 0.75),
+      file-upload: #004fb6,
+    ),
+    text: (
+      default: #fff,
+      file-upload: #fff,
+    ),
+  ),
+  policies: (
+    edit: (
+      complete: #4f9f31,
+      editable: (
+        hover: #f9f9f9,
+        icon: #8798ad,
+      ),
+      portfolio-impact: (
+        negative: #bd2624,
+        positive: #73af55,
+      ),
+      pricing-tool: #8798ad,
+      value: #1a61bd,
+    ),
+    manager: (
+      button: (
+        new: #5c596d,
+        pricing-breakdown: (
+          bg: #4f9f31,
+          disabled: #ccc,
+        ),
+      ),
+      heading: #5c596d,
+      reference: #004fb6,
+      selected-assets: (
+        bg: #8798ad,
+        text: #fff,
+      ),
+    ),
+    pricing-breakdown: (
+      accordion: (
+        bg: #edf2fa,
+        icon: #004fb6,
+      ),
+      column: (
+        heading: #8798ad,
+      ),
+      header: (
+        item: #1a61bd,
+        title: #8798ad,
+      ),
+      product: (
+        body: #fff,
+        box-shadow: rgba(0, 79, 182, 0.12),
+        name: #5c596d,
+        total: #004fb6,
+      ),
+      totals: (
+        bg: #8798ad,
+        text: #fff,
+      ),
+    ),
+    selector: (
+      active: (
+        bg: #fff,
+        border: #1a61bd,
+      ),
+      assets: (
+        bg: #e5edf8,
+        text: #004fb6,
+      ),
+      border: #f2f4ff,
+      box-shadow: #e5edf9,
+      gradient: (
+        from: #ebebeb,
+        to: #f9f9f9,
+      ),
+      icon: #b0bac9,
+      list-bg: #f9f9f9,
+      status: (
+        bound: #4f9f31,
+      ),
+      text: #1a61bd,
+      value: #1a61bd,
+    ),
+  ),
+  radio-selector: (
+    bg: (
+      default: #e5edf9,
+      selected: #1a61bd,
+    ),
+    text: (
+      default: #5c596d,
+      selected: #fff,
+    ),
+  ),
+  review-asset-cleanse: (
+    sidebar: (
+      bg: #f9faff,
+      border: #e0e7ff,
+      icon: #1a61bd,
+      info: (
+        address: #5c596d,
+        bg: #fff,
+        box-shadow: rgba(26, 97, 189, 0.08),
+        title: #8798ad,
+      ),
+      separator: #e5edf9,
+    ),
+  ),
+  risk-actions: (
+    container: #f2f6fc,
+    header: #5c596d,
+    panel: (
+      bg: #fff,
+    ),
+    tab: (
+      bg: (
+        active: #fff,
+        default: rgba(255, 255, 255, 0.8),
+      ),
+      text: (
+        active: #004fb6,
+        default: #9b9aa6,
+      ),
+    ),
+  ),
+  risk-action-instance: (
+    history: (
+      date: #1a61bd,
+      header: #ccc,
+      item: #5c596d,
+    ),
+    operation: (
+      bg: (
+        primary: #1a61bd linear-gradient(180deg, rgba(68, 192, 255, 0.4) 0%, rgba(68, 192, 255, 0) 100%),
+        secondary: rgba(92, 89, 109, 0.8),
+      ),
+      text: #fff,
+    ),
+    status: (
+      bg: #f9f9f9,
+      text: #5c596d,
+      icons: (
+        blocked: #5c596d,
+        complete: #4f9f31,
+        failed: #bd2624,
+        initiated: rgba(26, 97, 189, 0.8),
+        tasks: rgba(255, 160, 1, 0.8),
+      ),
+    ),
+    comment: (
+      button: (
+        bg: #1a61bd,
+      ),
+      header: #8798ad,
+      input: (
+        border: #e5edf9,
+        bg: #fff,
+      ),
+    ),
+  ),
+  risk-history: (
+    current-date: (
+      bg: #ffa001,
+      text: #fff,
+    ),
+    dialog: (
+      border: #eee,
+      label: #444,
+      label-light: #ccc,
+    ),
+    timeline: (
+      border: #b9cfeb,
+      text: #1a61bd,
+    ),
+    swim-lane: (
+      bg: rgba(229, 237, 249, 0.24),
+      box-shadow: rgba(26, 97, 189, 0.16),
+    ),
+  ),
+  risk-layers: (
+    layer: (
+      bg: rgba(92, 89, 109, 0.05),
+      border: rgba(93, 90, 110, 0.2),
+    ),
+    split: (
+      bg: rgba(46, 91, 255, 0.05),
+      border: solid 1px #004fb6,
+    ),
+  ),
+  risks-list: (
+    bg: #fff,
+    border: #f2f6fc,
+    box-shadow: rgba(26, 97, 189, 0.08),
+    hover: rgba(#eee, 0.5),
+    selected: #fbfbfb,
+  ),
+  risk-status: (
+    text: #fff,
+    cancelled: #bd2624,
+  ),
+  risk-summary: (
+    border: #eee,
+    label: #ccc,
+    title: #1a61bd,
+    value: #1a61bd,
+  ),
+  risk-transactions: (
+    data: (
+      bg: #f9f9f9,
+      border: #dfdee1,
+      open: #f70,
+    ),
+    label: #8798ad,
+    title: #4cb0d8,
+    value: #4cb0d8,
+  ),
+  round-checkbox: (
+    bg: (
+      default: #fff,
+      selected: #1a61bd,
+    ),
+    border: (
+      default: #ccc,
+      selected: #1a61bd,
+    ),
+    checkmark: #fff,
+  ),
+  rule-validations: (
+    selector: (
+      active: #004fb6,
+      default: #8798ad,
+    ),
+    warnings: (
+      bg: #f9f9f9,
+      icon: #ffa001,
+      item: #5c596d,
+      title: #8798ad,
+    ),
+  ),
+  sanctions-check: (
+    icon: (
+      error: #be2624,
+      success: rgba(#73af55, 0.8),
+      warning: rgba(255, 160, 1, 0.8),
+    ),
+    text: #5c596d,
+  ),
+  scheme-detail: (
+    hr: #e6e5e9,
+    item: #004fb6,
+    label: #8798ad,
+    subheading: #004fb6,
+  ),
+  scheme-header: (
+    bg: #fff,
+    box-shadow: rgba(0, 79, 182, 0.12),
+    heading: #5c596d,
+    label: #8798ad,
+    value: #1a61bd,
+  ),
+  scheme-selector: (
+    item: (
+      bg: #f9f9f9,
+      hr: #e6e5e9,
+      label: #8798ad,
+      text: #1a61bd,
+    ),
+  ),
+  scheme-side-panel: (
+    selector: (
+      active: #004fb6,
+      default: #8798ad,
+    ),
+  ),
+  scrollbar: (
+    bg: #f5f5f5,
+    thumb: #8798ad,
+  ),
+  search: (
+    input: (
+      bg: #f9f9f9,
+    ),
+    results: (
+      bg: #fff,
+      highlight: #5c596d,
+      link: #a6a3ae,
+      loading-bg: rgba(255, 255, 255, 0.7),
+      shadow: #e5edf9,
+      title: #8798ad,
+    ),
+    show-all: #1a61bd,
+    border: rgba(92, 89, 109, 0.1),
+  ),
+  section-header: (
+    bg: #f4f6fc,
+    border: #ccc,
+    text: #b0bac9,
+  ),
+  status-indicator: (
+    text: #fff,
+    warning: #ffa001,
+  ),
+  stepper: (
+    active: (
+      text: #5c596d,
+      bg: #5c596d,
+    ),
+    default-bg: #fff,
+    text: #999,
+    bg: #999,
+    complete: (
+      text: #4f9f31,
+      bg: #4f9f31,
+    ),
+  ),
+  task-actions: (
+    bg: #fff,
+    border: #f2f6fc,
+    icon: #1a61bd,
+    text: #2e384d,
+  ),
+  task-list: (
+    bg: #f2f6fc,
+  ),
+  tasks: (
+    categories: (
+      bind: #44c0ff,
+      bound: #44c0ff,
+      cancelled: #c50,
+      complete: #4f9f31,
+      declined: #d52f53,
+      lapsed: #89478a,
+      logged: #004fb6,
+      not-taken-up: #818181,
+      ntu: #818181,
+      pre-submission: #1a61bd,
+      prospect: #009ab1,
+      quote: #c01b83,
+      quoted: #c01b83,
+      withdrawn: #818181,
+      work-in-progress: #421b67,
+    ),
+    card: (
+      bg: #fff,
+      border: #5c596d,
+      box-shadow: rgba(26, 97, 189, 0.08),
+      date: #8798ad,
+      heading: #5c596d,
+      text: #8798ad,
+      type: #8798ad,
+    ),
+    count: (
+      text: #fff,
+    ),
+  ),
+  toggle-view: (
+    active-item: #f4f5f7,
+    bg: #fff,
+  ),
+  toggle-status: (
+    active-item: #f4f5f7,
+    bg: #fff,
+  ),
+  toggle-switch: (
+    bg: (
+      yes: #bada55,
+      no: #666,
+    ),
+    toggle: #fff,
+  ),
+  tooltip: (
+    bg: #5c596d,
+    box-shadow: rgba(71, 75, 87, 0.3),
+    header: #fff,
+    text: #bdbcc4,
+  ),
+  user-detail: (
+    avatar: (
+      bg: #004fb6,
+      text: #fff,
+    ),
+    text: #004fb6,
+  ),
+  version-indicator: (
+    background: #8798ad,
+    icon: #1a61bd,
+    text: #fff,
+    version-text: rgba(#fff, 0.8),
+  ),
+);

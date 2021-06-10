@@ -1,0 +1,11 @@
+@function deep-map-get($map, $list...) {
+  @each $key in $list {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+@function get-color($list...) {
+  @return deep-map-get($global-colors, $list...);
+}

@@ -1,0 +1,9 @@
+// sass-lint:disable-block no-url-domains no-url-protocols
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+$font-stack: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+$font-weight: (
+  light: 300,
+  normal: 400,
+  semi-bold: 600,
+  bold: 700,
+);

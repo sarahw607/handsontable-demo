@@ -1,0 +1,120 @@
+.modal {
+  align-items: center;
+  background: get-color(modal, overlay);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  padding: 30px;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  &__close {
+    background-color: get-color(modal, close, bg);
+    border-radius: 50%;
+    box-shadow: 0 0 8px 0 get-color(modal, close, box-shadow);
+    color: get-color(modal, close, icon);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font: map-get($font-weight, light) 18px/24px $font-stack;
+    height: 34px;
+    justify-content: center;
+    position: absolute;
+    right: -15px;
+    text-align: center;
+    top: -15px;
+    width: 34px;
+    z-index: 200;
+
+    .modal--fullscreen & {
+      z-index: 150;
+    }
+  }
+
+  &__content {
+    background: get-color(modal, bg);
+    box-shadow: 0 2px 12px 0 get-color(modal, box-shadow);
+    display: flex;
+    flex-direction: column;
+    max-height: 85%;
+    position: relative;
+    transform: translate3d(0, 0, 0);
+    width: 81.25%;
+
+    .modal--small & {
+      max-height: 35%;
+      width: 35%;
+    }
+
+    .modal--fullscreen & {
+      height: 100%;
+      max-height: 100%;
+      width: 100%;
+    }
+
+    .modal--width-initial & {
+      width: initial;
+    }
+
+    .modal--min-height & {
+      min-height: 80%;
+    }
+  }
+
+  &__footer {
+    align-items: center;
+    background: linear-gradient(
+      180deg,
+      get-color(policies, selector, gradient, from) 0%,
+      get-color(policies, selector, gradient, to) 4.68%,
+      get-color(policies, selector, gradient, to) 100%
+    );
+    display: flex;
+    flex-shrink: 0;
+    padding: 24px;
+  }
+
+  &__header {
+    border-bottom: 1px solid get-color(modal, header, border);
+    display: flex;
+    margin: 0 0 15px;
+    padding-bottom: 16px;
+
+    .button {
+      margin-left: 24px;
+    }
+  }
+
+  &__inner {
+    -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes
+    height: 100%;
+    overflow-y: auto;
+    padding: 24px;
+
+    .modal--no-inner-padding & {
+      padding: 0;
+    }
+  }
+
+  &__padding {
+    padding: 0;
+
+    .modal--no-inner-padding & {
+      padding: 24px;
+    }
+  }
+
+  &__title {
+    color: get-color(modal, header, text);
+    font: map-get($font-weight, semi-bold) 24px/32px $font-stack;
+    margin: 0;
+
+    &-highlight {
+      color: get-color(modal, header, highlight);
+      font-weight: map-get($font-weight, normal);
+    }
+  }
+}

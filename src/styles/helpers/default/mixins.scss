@@ -1,0 +1,60 @@
+@mixin assets-table-cell {
+  border: 1px solid get-color(handsontable, border);
+  border-width: 0 1px;
+  color: get-color(handsontable, text, default);
+  font: 12px $font-stack;
+  height: $asset-table-row-height;
+  line-height: $asset-table-row-height;
+  padding: 0 16px;
+}
+
+@mixin assets-table-heading {
+  background: get-color(handsontable, bg, header);
+  border: 1px solid get-color(handsontable, border);
+  color: get-color(handsontable, text, default);
+  font: 14px/16px $font-stack;
+  letter-spacing: 0.4px;
+  padding: 8px 16px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+@mixin editable-value {
+  color: get-color(policies, edit, value);
+  font: 16px/40px $font-stack;
+  letter-spacing: 0.4px;
+  width: 100%;
+}
+
+@mixin scrollbars($bg: get-color(scrollbar, bg), $thumb: get-color(scrollbar, thumb), $width: 10px) {
+  // sass-lint:disable-block no-vendor-prefixes (need to add important to overide autofill styles)
+  &::-webkit-scrollbar {
+    height: $width;
+    width: $width;
+
+    &-track {
+      background: $bg;
+      border-radius: $width / 2;
+    }
+
+    &-thumb {
+      background: $thumb;
+      border-radius: $width / 2;
+    }
+  }
+}
+
+@mixin status-lozenge($text-colour) {
+  border-radius: 11px;
+  color: $text-colour;
+  display: inline-block;
+  font: map-get($font-weight, semi-bold) 8px/12px $font-stack;
+  height: 12px;
+  letter-spacing: 0.4px;
+  min-width: 45px;
+  padding: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: auto;
+}

@@ -1,0 +1,76 @@
+// sass-lint:disable class-name-format force-element-nesting no-qualifying-elements no-important
+.handsontable {
+  .wtHolder {
+    @include scrollbars;
+  }
+
+  tr.validations-exist td {
+    background: get-color(handsontable, bg, highlight) !important;
+  }
+
+  table.htCore {
+    border: 1px solid get-color(handsontable, border);
+    border-collapse: collapse;
+    color: get-color(handsontable, text, default);
+    font: 12px/16px $font-stack;
+    width: 100%;
+
+    th {
+      @include assets-table-heading;
+      // box-sizing: border-box;
+      // height: auto;
+    }
+
+    .currentRow {
+      background-color: get-color(handsontable, th, bg);
+    }
+
+    tbody {
+      td {
+        border: 1px solid get-color(handsontable, border);
+        border-width: 0 1px;
+
+        &.changed-or-added {
+          background: get-color(handsontable, bg, highlight);
+        }
+
+        &.outside-range {
+          background: get-color(handsontable, bg, outside-range);
+          color: get-color(handsontable, text, outside-range) !important;
+        }
+      }
+
+      tr {
+        &:nth-child(odd) {
+          td {
+            background: get-color(handsontable, bg, odd);
+
+            &.changed-or-added {
+              background: get-color(handsontable, bg, highlight);
+            }
+
+            &.outside-range {
+              background: get-color(handsontable, bg, outside-range);
+              color: get-color(handsontable, text, outside-range) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-readOnly {
+  color: get-color(handsontable, text, read-only);
+}
+
+.review-asset-cleanse {
+  .ht_clone_left {
+    z-index: 105; // Want the autocomplete to go behind the left fixed column
+  }
+
+  .ht_clone_top,
+  .ht_clone_top_left_corner {
+    z-index: 106; // Want the autocomplete to go behind the fixed header
+  }
+}
